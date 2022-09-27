@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center">
+  <h1 class="mt-4 border-bottom"><strong> Pet's Details </strong></h1>
+</div>
+
+
+<h2><%= @pet.name %></h2>
+<p><%= @pet.category %></p>
+<p><%= @pet.birth %></p>
+
+<p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
+
+<p><%= link_to "Remove", pet_path(@pet), class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: "Are you sure?" }   %></p>
