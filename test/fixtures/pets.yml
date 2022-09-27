@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  birth: 2022-09-27
+  adopted: false
+  owner: MyString
+  adoption_time: 2022-09-27 10:48:06
+
+two:
+  name: MyString
+  category: MyString
+  birth: 2022-09-27
+  adopted: false
+  owner: MyString
+  adoption_time: 2022-09-27 10:48:06
