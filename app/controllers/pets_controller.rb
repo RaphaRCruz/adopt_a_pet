@@ -26,7 +26,7 @@ class PetsController < ApplicationController
 
   def update
     if @pet.update(pet_params)
-      redirect_to pet_path(@pet), notice: 'Pet Adopted!'
+      redirect_to pet_path(@pet)
     else
       render :edit
     end

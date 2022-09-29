@@ -7,11 +7,11 @@
     </div>
 
 
-    <h2>Name: <%= @pet.name %></h2>
-    <p>Category: <%= @pet.category %></p>
-    <p>Birth: <%= @pet.birth %></p>
-    <p>New owner: <%= @pet.owner %></p>
-    <p>Adoption in: <%= Time.now %></p>
+    <h2><strong>Name: </strong><%= @pet.name %></h2>
+    <p><strong>Category: </strong><%= @pet.category %></p>
+    <p><strong>Birth: </strong><%= @pet.birth %></p>
+    <p><strong>New owner: </strong><%= @pet.owner %></p>
+    <p><strong>Adoption in: </strong><%= Time.now %></p>
 
     <p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
 
@@ -21,9 +21,9 @@
   </div>
 
 
-  <h2><%= @pet.name %></h2>
-  <p><%= @pet.category %></p>
-  <p><%= @pet.birth %></p>
+  <h2><strong>Name: </strong><%= @pet.name %></h2>
+  <p><strong>Category: </strong><%= @pet.category %></p>
+  <p><strong>Birth: </strong><%= @pet.birth %></p>
 
   <p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
 
