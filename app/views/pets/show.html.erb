@@ -1,12 +1,37 @@
-<div class="d-flex justify-content-center">
-  <h1 class="mt-4 border-bottom"><strong> Pet's Details </strong></h1>
-</div>
+<% if @pet.owner %>
+  <div class="d-flex justify-content-center">
+      <h1 class="mt-4 border-bottom"><strong> Congratulations </strong></h1>
+    </div>
+    <div class="d-flex justify-content-center">
+      <h2>Now <%= @pet.name %> has a new home!</h2>
+    </div>
 
 
-<h2><%= @pet.name %></h2>
-<p><%= @pet.category %></p>
-<p><%= @pet.birth %></p>
+    <h2>Name: <%= @pet.name %></h2>
+    <p>Category: <%= @pet.category %></p>
+    <p>Birth: <%= @pet.birth %></p>
+    <p>New owner: <%= @pet.owner %></p>
+    <p>Adoption in: <%= Time.now %></p>
 
-<p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
+    <p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
 
-<p><%= link_to "Remove", pet_path(@pet), class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: "Are you sure?" }   %></p>
+<% else %>
+  <div class="d-flex justify-content-center">
+    <h1 class="mt-4 border-bottom"><strong> Pet's Details </strong></h1>
+  </div>
+
+
+  <h2><%= @pet.name %></h2>
+  <p><%= @pet.category %></p>
+  <p><%= @pet.birth %></p>
+
+  <p><%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-outline-secondary btn-sm" %></p>
+
+  <h3>Did you like to adoption this pet?</h3>
+
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :owner %>
+    <%= f.submit class: "btn btn-outline-secondary btn-sm", value: "Adopt!" %>
+  <% end %>
+
+<% end %>

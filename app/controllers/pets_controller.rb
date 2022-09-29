@@ -2,7 +2,7 @@ class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pets = Pet.where(adopted: false)
+    @pets = Pet.where(owner: nil)
   end
 
   def show
@@ -26,7 +26,7 @@ class PetsController < ApplicationController
 
   def update
     if @pet.update(pet_params)
-      redirect_to root_path, notice: 'Update sucess!'
+      redirect_to pet_path(@pet), notice: 'Pet Adopted!'
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class PetsController < ApplicationController
   end
 
   def adoption
-    @pets = Pet.where(adopted: true)
+    @pets = Pet.where.not(owner: nil)
   end
 
   private
