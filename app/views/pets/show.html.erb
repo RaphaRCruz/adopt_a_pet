@@ -5,7 +5,9 @@
     <div class="d-flex justify-content-center">
       <h2>Now <%= @pet.name %> has a new home!</h2>
     </div>
-
+    <div class="d-flex justify-content-center">
+      <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
+    </div>
 
     <h2><strong>Name: </strong><%= @pet.name %></h2>
     <p><strong>Category: </strong><%= @pet.category %></p>
@@ -18,6 +20,10 @@
 <% else %>
   <div class="d-flex justify-content-center">
     <h1 class="mt-4 border-bottom"><strong> Pet's Details </strong></h1>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
   </div>
 
 

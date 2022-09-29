@@ -1,4 +1,5 @@
 class Pet < ApplicationRecord
+  has_one_attached :photo
   validates :name, presence: true, length: { minimum: 2 }
   validates :category, presence: true,
                        inclusion: { in: ['Dog', 'Cat', 'Other'],
