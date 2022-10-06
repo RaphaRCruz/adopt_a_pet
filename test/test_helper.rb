@@ -10,4 +10,5 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  Capybara.save_path = Rails.root.join("tmp/capybara")
 end

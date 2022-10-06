@@ -11,8 +11,8 @@
             <h5 class="card-title border-bottom"><%= pet.name %></h5>
             <p class="card-text">Category: <%= pet.category %></p>
             <p class="card-text">Birth: <%= pet.birth %></p>
-            <p> <%= link_to "Pet's details", pet_path(pet), class: "btn btn-primary" %></p>
-            <p><%= link_to "Remove", pet_path(pet), class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: "Are you sure?" } %></p>
+            <p><%= link_to "Pet's details", pet_path(pet), class: "btn btn-primary" %></p>
+            <%= link_to "Remove", pet_path(pet), class: "btn btn-outline-danger btn-sm", data: { method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         </div>
       </div>
