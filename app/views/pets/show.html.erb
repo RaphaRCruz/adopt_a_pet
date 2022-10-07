@@ -6,7 +6,9 @@
       <h2>Now <%= @pet.name %> has a new home!</h2>
     </div>
     <div class="d-flex justify-content-center">
-      <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
+      </div>
     </div>
 
     <h2><strong>Name: </strong><%= @pet.name %></h2>
@@ -23,7 +25,9 @@
   </div>
 
   <div class="d-flex justify-content-center">
-    <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
+    <div class="card" style="width: 18rem;">
+      <%= cl_image_tag @pet.photo.key, height: 250, width: 300 %>
+    </div>
   </div>
 
 

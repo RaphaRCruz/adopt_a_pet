@@ -12,7 +12,6 @@
             <p class="card-text">Category: <%= pet.category %></p>
             <p class="card-text">Birth: <%= pet.birth %></p>
             <p> <%= link_to "Pet's details", pet_path(pet), class: "btn btn-primary" %></p>
-            <%= button_to "Remove", pet_path(pet), class: "btn btn-outline-danger btn-sm", method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %>
           </div>
         </div>
       </div>
